@@ -1,5 +1,5 @@
 <?php
-  include_once 'connect.php';
+  include_once 'connect.php'
 ?>
 
 
@@ -12,8 +12,10 @@ $email1 = $_POST["email_login"];
 
 $id = $_GET["id"];
 $query1 = "SELECT * FROM customer_account WHERE Email_ID = '" . $id . "'";
-$result4 = $conn->query($query1);
-$row = $result4->fetch_assoc();
+//$result4 = $conn->query($query1);
+$result4=mysqli_query($conn,$query1);
+//$row = $result4->fetch_assoc();
+$row=mysqli_fetch_assoc($result4);
 $name = $row["Name"];
 $cust_id = $row["Cust_ID"];
 $email = $row["Email_ID"]
