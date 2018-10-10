@@ -26,8 +26,8 @@ $name=$_SESSION['name'];
 $cust_id=$_SESSION['c_id'];
 
 
-// $message = "Username and/or Password incorrect.\\nTry again.";
-// echo "<script type='text/javascript'>alert('$message');</script>";
+//$message = "Username and/or Password incorrect.\\nTry again.";
+//echo "<script type='text/javascript'>alert('$message');</script>";
 
 ?>
 
@@ -68,9 +68,8 @@ $cust_id=$_SESSION['c_id'];
             echo '<div class="dropdown-menu">
           <a class="dropdown-item" href="logout.php">Logout</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="edit_temp.php">Edit account info</a>
-          </div>'
-          ;
+          <a class="dropdown-item" href="my_account.php">Account info</a>
+          </div>';
           }
           else{
             echo '<div class="dropdown-menu">
@@ -108,10 +107,22 @@ $cust_id=$_SESSION['c_id'];
 <div class="container">
   <div class="row mt-sm-4 mt-md-0">
     <div class="col-sm-12 col-md-8">
-      <!-- <img src="images/sample.jpg" class="img-circle" style="border-radius: 50%" width="150px"> -->
-      <h3>Name: <?php echo $name; ?></h3>
-      <h3>User ID: <?php echo $cust_id; ?></h3>
-      <h3>Email ID: <?php echo $email; ?></h3>
+      <!-- <img src="images/sample.jpg" class="img-circle" style="border-radius: 50%" width="150px"><br><br> -->
+     <form action="edit.php" method="POST">
+       <div class="form-group">
+          <input type="text" class="form-control" name="name_edit" placeholder="Edit name">
+       </div>
+       <div class="form-group">
+          <input type="text" class="form-control" name="email_edit" placeholder="Edit email address">
+       </div>
+       <div class="form-group">
+          <input type="submit" value="Save changes" class="btn btn-primary py-2 px-4">
+       </div>
+     </form>
+
+      <!-- <h3>Edit Name: <?php //echo $name; ?></h3>
+      <h3>User ID: <?php //echo $cust_id; ?></h3>
+      <h3> Edit Email ID: <?php //echo $email; ?></h3> -->
     </div>
 
     <div class="col-sm-12 col-md-4">
@@ -119,19 +130,13 @@ $cust_id=$_SESSION['c_id'];
 
         <ul class="nav flex-column nav-pills">
             <li class="nav-item">
-                <a class="nav-link" name="edit_account" href="edit_temp.php">Edit User Info</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" name="previous_account" href="about_us.php">View Previous Tours</a>
+                <a class="nav-link" name="previous_account" href="about_us.html">View Previous Tours</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" name="signout_account" href="logout.php">Sign Out</a>
             </li>
-             <li class="nav-item">
-                <a class="nav-link" name="delete_account" href="delete.php">Delete account</a>
-            </li>
             <li class="nav-item">
-                <a class="nav-link" name="follow_account" href="https://www.facebook.com/DDVV-Travels-1911381365838357/" target="_blank">Follow us on Facebook!</a>
+                <a class="nav-link" name="follow_account" href="https://www.facebook.com/DDVV-Travels-1911381365838357/">Follow us on Facebook!</a>
             </li>
         </ul>
     </div>

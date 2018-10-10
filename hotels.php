@@ -1,3 +1,8 @@
+<?php
+  include_once 'connect.php';
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,43 +12,54 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<title>Tours</title>
+	<title>Hotels</title>
 </head>
 <body>
-  <div class="fixed-top">
-	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	<div class="fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.html">DDVV Tours and Travels</a>
+      <a class="navbar-brand" href="index.php">DDVV Tours and Travels</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu"></span> Menu
       </button>
 
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="destinations.html" class="nav-link">Destinations</a></li>
-          <li class="nav-item active"><a href="tours.html" class="nav-link">Tours</a></li>
+          <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="destinations.php" class="nav-link">Destinations</a></li>
+          <li class="nav-item"><a href="tours.php" class="nav-link">Tours</a></li>
           <li class="nav-item dropdown">
-    		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
-       			My Account
-    		</a>
-    	<div class="dropdown-menu">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
+            Account
+        </a>
+        <?php 
+          if (isset($_SESSION['c_id'])) {
+            echo '<div class="dropdown-menu">
+          <a class="dropdown-item" href="logout.php">Logout</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="my_account.php">Account info</a>
+          </div>';
+          }
+          else{
+            echo '<div class="dropdown-menu">
         <a class="dropdown-item" href="login.html">Login</a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="sign_up.html">Sign Up</a>
-    </div>
+    </div>';
+          }
+      ?>
 </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
             Book Tours
         </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="booking_default.html">DDVV Special Tour</a>
+        <a class="dropdown-item" href="booking_default.php">DDVV Special Tour</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="booking_custom.html">Customize Your Dream Tour</a>
+        <a class="dropdown-item" href="booking_custom.php">Customize Your Dream Tour</a>
     </div>
 </li>
-          <li class="nav-item"><a href="about_us.html" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="about_us.php" class="nav-link">About Us</a></li>
         </ul>
       </div>
     </div>
@@ -52,7 +68,7 @@
   
   	<div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-2">Tours</h1>
+    <h1 class="display-2">Hotels</h1>
 
     </div>
 </div>
@@ -110,32 +126,68 @@
  -->
 
 
-<br>
-<section class="ftco-section bg-light">
-</br>
 <div class="container">
-        <h3>DDVV special tour</h3>
-        <p class="lead">Mumbai-Amritsar-Delhi-Kolkata-Sikkim</p>
+<div class="row">
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 ">
+              <a target="_blank" href="images/bg_1.jpg">
+                <img src="images/bg_1.jpg" class="img-responsive" width="95%" height="300">
+                <div class="desc">
+                  <h5 class="text-dark bg-light text-center">Beach</h5>
+                </div>
+              </a>
+            </div>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <button> <a href="booking_default.html"> Click here to book!</a></button>
-</div>
-<br>
-</section>
-<br><br><br>
-<section class="ftco-section bg-light">
-  <br>
-<div class="container">
-        <h3>Customize your own tour</h3>
-        <p class="lead">Curate your own dream tour!</p>
+            <div class="image2 col-lg-4 col-md-4 col-sm-4 col-xs-6 ">
+              <a target="_blank" href="images/bg_1.jpg">
+                <img src="images/bg_2.jpg" class="img-responsive" width="95%" height="300">
+                <div class="desc">
+                  <h5 class="text-dark bg-light text-center">Beach</h5>
+                </div>
+              </a>
+            </div>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <button> <a href="booking_custom.html"> Click here to book!</a></button>
+            <div class="image3 col-lg-4 col-md-4 col-sm-4 col-xs-6 ">
+              <a target="_blank" href="images/bg_1.jpg">
+                <img src="images/bg_3.jpg" class="img-responsive" width="95%" height="300">
+                <div class="description">
+                  <h5 class="text-dark bg-light text-center">Beach</h5>
+                </div>
+              </a>
+                
+            </div>
 </div>
-<br>
-</section>
+<br><br>
+<div class="row">
+            <div class="image4 col-lg-4 col-md-4 col-sm-4 col-xs-6 ">
+              <a target="_blank" href="images/bg_1.jpg">
+                <img src="images/bg_4.jpg" class="img-responsive" width="95%" height="300">
+                <div class="description">
+                  <h5 class="text-dark bg-light text-center">Beach</h5>
+                </div>
+              </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 ">
+              <a target="_blank" href="images/bg_1.jpg">
+                <img src="images/bg_5.jpg" class="img-responsive" width="95%" height="300">
+                <div class="description">
+                  <h5 class="text-dark bg-light text-center">Beach</h5>
+                </div>
+              </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 ">
+              <a target="_blank" href="images/bg_1.jpg">
+                <img src="images/bg_1.jpg" class="img-responsive" width="95%" height="300">
+                <div class="description">
+                  <h5 class="text-dark bg-light text-center">Beach</h5>
+                </div>
+              </a>
+            </div>
+</div>
+</div> 
+
+            
 <br><br><br>
 
 
@@ -157,7 +209,7 @@
     <section class="ftco-section bg-dark ftco-light "> 
     <div class="footer-copyright text-center text_color-light py-4">
       <p class="text-light bg-dark"><!-- <h5 class="ftco-heading-5 ftco-heading-light"> -->© 2016 Copyright:
-      <a href="index.html"> DDVVToursAndTravels.com</a></p>
+      <a href="index.php"> DDVVToursAndTravels.com</a></p>
     </div>
     <!-- Copyright -->
 </section>

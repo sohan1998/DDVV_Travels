@@ -5,6 +5,9 @@
 
 
 <?php 
+
+session_start();
+
 //Fetch User submitted information
 $email = mysqli_real_escape_string($conn,$_POST["email_login"]);
 $psw = mysqli_real_escape_string($conn,md5($_POST["psw_login"]));
@@ -18,9 +21,26 @@ $result = mysqli_query($conn,$query3);
 $resultCheck = mysqli_num_rows($result);
  
 if ($resultCheck>0) {
-	echo "<script> location.href = 'my_account.php?id=".$email."' </script>";
-}
+	$row=mysqli_fetch_assoc($result);
+	$_SESSION['name']=$row['Name'];
+	$_SESSION['email']=$row['Email_ID'];
+	$_SESSION['pwd']=$row['Password'];
+	$_SESSION['dob']=$row['DOB'];
+	$_SESSION['c_id']=$row['Cust_ID'];
 
+	//header("Location: login.html?login=success");
+
+	//echo "<script> location.href = 'my_account.php?id=".$email."' </script>";
+	header("Location: my_account.php");
+}
+else
+{
+	// echo "<h1 align='center'> GOTCHA </h1>";
+	//header("login.html");
+	//echo "<script> location.href = 'login.html' </script>";
+	header("Location: login.html?login=error");
+	exit();
+}
 
 // if ($resultCheck>0) {
 // 	while ($row=mysqli_fetch_assoc($result)) {

@@ -1,3 +1,10 @@
+<?php
+  include_once 'connect.php';
+  session_start();
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,39 +18,50 @@
 </head>
 <body>
   <div class="fixed-top">
-	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.html">DDVV Tours and Travels</a>
+      <a class="navbar-brand" href="index.php">DDVV Tours and Travels</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu"></span> Menu
       </button>
 
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="destinations.html" class="nav-link">Destinations</a></li>
-          <li class="nav-item active"><a href="tours.html" class="nav-link">Tours</a></li>
+          <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="destinations.php" class="nav-link">Destinations</a></li>
+          <li class="nav-item active"><a href="tours.php" class="nav-link">Tours</a></li>
           <li class="nav-item dropdown">
-    		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
-       			My Account
-    		</a>
-    	<div class="dropdown-menu">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
+            Account
+        </a>
+       <?php 
+          if (isset($_SESSION['c_id'])) {
+            echo '<div class="dropdown-menu">
+          <a class="dropdown-item" href="logout.php">Logout</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="my_account.php">Account info</a>
+          </div>';
+          }
+          else{
+            echo '<div class="dropdown-menu">
         <a class="dropdown-item" href="login.html">Login</a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="sign_up.html">Sign Up</a>
-    </div>
+    </div>';
+          }
+      ?>
 </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
             Book Tours
         </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="booking_default.html">DDVV Special Tour</a>
+        <a class="dropdown-item" href="booking_default.php">DDVV Special Tour</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="booking_custom.html">Customize Your Dream Tour</a>
+        <a class="dropdown-item" href="booking_custom.php">Customize Your Dream Tour</a>
     </div>
 </li>
-          <li class="nav-item"><a href="about_us.html" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="about_us.php" class="nav-link">About Us</a></li>
         </ul>
       </div>
     </div>
@@ -119,7 +137,7 @@
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <button> <a href="booking_default.html"> Click here to book!</a></button>
+        <button> <a href="booking_default.php"> Click here to book!</a></button>
 </div>
 <br>
 </section>
@@ -132,7 +150,7 @@
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <button> <a href="booking_custom.html"> Click here to book!</a></button>
+        <button> <a href="booking_custom.php"> Click here to book!</a></button>
 </div>
 <br>
 </section>
@@ -157,7 +175,7 @@
     <section class="ftco-section bg-dark ftco-light "> 
     <div class="footer-copyright text-center text_color-light py-4">
       <p class="text-light bg-dark"><!-- <h5 class="ftco-heading-5 ftco-heading-light"> -->© 2016 Copyright:
-      <a href="index.html"> DDVVToursAndTravels.com</a></p>
+      <a href="index.php"> DDVVToursAndTravels.com</a></p>
     </div>
     <!-- Copyright -->
 </section>
