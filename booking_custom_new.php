@@ -79,15 +79,16 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-6">
-			<pre style="font-size: 50px"><b>Cities</b></pre>
+		<div class="col-md-12">
+			<!--<pre style="font-size: 50px"><b>Cities</b></pre>-->
 			<?php
 				if(isset($_POST['submit'])){
 				//to run PHP script on submit
 					if(!empty($_POST['check_list'])){
+					echo "<table class='table table-hover' style='font-size: 20px; margin:auto;'><thead class='bg-secondary text-white'><tr><th>City</th><th>Luxury</th><th>Budget</th></tr></thead><tbody>";
+
 					// Loop to store and display values of individual checked checkbox.
 						foreach($_POST['check_list'] as $selected){
-							echo "<table><tr>" . $selected . " ";
 							//Fetch User submitted information
 							$place_name = mysqli_real_escape_string($conn, $selected);
 							// $psw = mysqli_real_escape_string($conn,md5($_POST["psw_login"]));
@@ -101,13 +102,39 @@
 							$resultCheck = mysqli_num_rows($result);
 							if ($resultCheck > 0) {
 								$row = mysqli_fetch_assoc($result);
-								echo $row['Hotel_LUX'] . '&nbsp;&nbsp;&nbsp;&nbsp;' . $row['Hotel_CFO'] . "<hr>";
+								echo "<tr>"."<td>".$place_name."</td>"."<td>".$row['Hotel_LUX']."</td>"."<td>".$row['Hotel_CFO']."</td>"."</tr>";
+								//echo $row['Hotel_LUX'] . '&nbsp;&nbsp;&nbsp;&nbsp;' . $row['Hotel_CFO'] . "<hr>";
 							}
-							
+
 						}
+						$query2 = "SELECT SUM(Price) AS Total_LUX FROM hotel WHERE Place IN ('" . implode("', '", $_POST['check_list']) . "') AND Type = 'LUX'";
+
+						$result2 = mysqli_query($conn, $query2);
+						$total_lux = mysqli_fetch_assoc($result2)['Total_LUX'];
+
+						$query3 = "SELECT SUM(Price) AS Total_CFO FROM hotel WHERE Place IN ('" . implode("', '", $_POST['check_list']) . "') AND Type = 'CFO'";
+
+						$result3 = mysqli_query($conn, $query3);
+						$total_cfo = mysqli_fetch_assoc($result3)['Total_CFO'];
+
+							echo "<tr class='bg-light'>"."<td>"."TOTAL"."</td>"."<td>".$total_lux."</td>"."<td>".$total_cfo."</td>"."</tr>";
+						echo "</tbody></table>";
 					}
 				}
 			?>
+
+			<form action="#" class="mt-3" style="max-width: 400px; margin: auto;">
+				<div class="form-group">
+					<label for="package">Select Package:</label>
+					<select class="form-control" id="package" name="package">
+						<option value="LUX">Luxurious</option>
+						<option value="CFO">Budget</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<input type="submit" name="submit" value="Submit" class="btn btn-primary btn-block"/>
+				</div>
+			</form>
 		<!-- <br><br><br> -->
 		<!-- <form>
 					<div class="icon"><span class="ion-ios-arrow-down"></span></div>
