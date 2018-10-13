@@ -152,7 +152,7 @@
 
 <div class="container">
 <h5> The Resort </h5>
-<p>he Resort, located on the shoreline of the Arabian Sea is a beach facing hotel offering modern rooms with free Wi-Fi. It is 1 km from INS Hamla Naval Base. The air-conditioned rooms feature garden, pool or sea views. Each is equipped with a cable TV, wardrobe and desk. Private bathroom includes free toiletries and a shower. Relax by the outdoor pool or enjoy a work-out at the fitness center. The hotel has a 24hours reception and a travel desk.</p>
+<p>The Resort, located on the shoreline of the Arabian Sea is a beach facing hotel offering modern rooms with free Wi-Fi. It is 1 km from INS Hamla Naval Base. The air-conditioned rooms feature garden, pool or sea views. Each is equipped with a cable TV, wardrobe and desk. Private bathroom includes free toiletries and a shower. Relax by the outdoor pool or enjoy a work-out at the fitness center. The hotel has a 24hours reception and a travel desk.</p>
         <p>The Resort provides a number of facilities and amenities to make your stay comfortable. Some of the facilities and services you can avail include room service, baby sitting, spa, restaurant, bar, health club, business center, conference halls, internet connectivity, airport transfers, swimming pool, gymnasium, parking and many more.
 Rooms amenities offered – Tea/coffee supplies, Business stationery, toiletries, Electronic safe.
 Amenities on request – Slipper, dental kit, shaving kit, comb</p>
@@ -160,7 +160,7 @@ Amenities on request – Slipper, dental kit, shaving kit, comb</p>
 <div class="hotels">
     <div class="container bg-light text-center my-3">
     <div class="row mx-auto my-auto">
-        <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+        <div id="recipeCarousel2" class="carousel slide w-100" data-ride="carousel">
             <div class="carousel-inner w-100" role="listbox">
                 <div class="carousel-item active">
                     <img class="d-block col-4 img-fluid" src="images/mumbai/mum_10.jpg">
@@ -181,11 +181,11 @@ Amenities on request – Slipper, dental kit, shaving kit, comb</p>
                     <img class="d-block col-4 img-fluid" src="images/mumbai/mum_15.jpg">
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#recipeCarousel2" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#recipeCarousel2" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>

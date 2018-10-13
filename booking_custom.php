@@ -1,18 +1,22 @@
 <?php
-  include_once 'connect.php';
+  include 'connect.php';
   session_start();
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Required meta tags -->
+  <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="styles.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<title>Customize Your Dream Tour</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        
+    </script>
+  <title>Customize Your Dream Tour</title>
 </head>
 <body>
   <div class="fixed-top">
@@ -66,343 +70,43 @@
   </nav>
 </div>
   
-  	<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid">
       <div class="container">
-    <h1 class="display-3">Customize Your Dream Tour!</h1>
+        <h1 class="display-3">Customize Your Dream Tour!</h1>
+      </div>
 </div>
-    
-</div>
+
 <div class="container">
 <div class="row">
-  <div class="column">
-    <h2>Cities</h2>
-    
-                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      
-                      <option value="">-None-</option>
-                      <option value="">Mumbai</option>
-                      <option value="">Bangalore</option>
-                      <option value="">Delhi</option>
-                      <option value="">Sikkim</option>
-                      <option value="">Srinagar</option>
-                      <option value="">Goa</option>
-                      <option value="">Amritsar</option>
-                      <option value="">Kolkata</option>
-                      <option value="">Chennai</option>
-                    
-                    </select>
-                  
-                
+  <div class>
+    <pre style="font-size: 50px"><b>Where do you want
+to travel?</b></pre>
+    <!-- <br><br><br> -->
+    <form action="booking_custom_new.php" method="POST">
+          <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+          <input type="checkbox" name="check_list[]" value="Mumbai"><font style="font-size: 20px"> Mumbai</font><br>
+          <input type="checkbox" name="check_list[]" value="Bangalore"><font style="font-size: 20px"> Bangalore</font><br>
+          <input type="checkbox" name="check_list[]" value="Delhi"><font style="font-size: 20px"> Delhi</font><br>
+          <input type="checkbox" name="check_list[]" value="Gangtok"><font style="font-size: 20px"> Gangtok</font><br>
+          <input type="checkbox" name="check_list[]" value="Srinagar"><font style="font-size: 20px"> Srinagar</font><br>
+          <input type="checkbox" name="check_list[]" value="Panaji"><font style="font-size: 20px"> Panaji</font><br>
+          <input type="checkbox" name="check_list[]" value="Amritsar"><font style="font-size: 20px"> Amritsar</font><br>
+          <input type="checkbox" name="check_list[]" value="Kolkata"><font style="font-size: 20px"> Kolkata</font><br>
+          <input type="checkbox" name="check_list[]" value="Chennai"><font style="font-size: 20px"> Chennai</font><br><br>
+          <input type="submit" name="submit" value="Next"> 
+    </form>
+  </div>
 
-  </div>
-  <div class="column">
-    <h2>Hotels</h2>
-    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      <option value="">-None-</option>
-                      <option value="">Cost Effective Option</option>
-                      <option value="">Luxurious Option</option>
-                      
-                    </select>
-  </div>
-  <div class="column">
+
+ <!--  <div class="column" id="prices">
     <h2>Price</h2>
-    <input type="number" class="form-control" name="price" placeholder="insert price">
+    <input type="number" class="form-control" name="price" placeholder="">
   </div>
 </div>
-
-<div class="row">
-  <div class="column">
-    
-                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      
-                      <option value="">-None-</option>
-                      <option value="">Mumbai</option>
-                      <option value="">Bangalore</option>
-                      <option value="">Delhi</option>
-                      <option value="">Sikkim</option>
-                      <option value="">Srinagar</option>
-                      <option value="">Goa</option>
-                      <option value="">Amritsar</option>
-                      <option value="">Kolkata</option>
-                      <option value="">Chennai</option>
-                    </select>
-                  
-                
-
-  </div>
-  <div class="column">
-    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      <option value="">-None-</option>
-                      <option value="">Cost Effective Option</option>
-                      <option value="">Luxurious Option</option>
-                      </select>
-  </div>
-  <div class="column">
-    <input type="number" class="form-control" name="price" placeholder="insert price">
-  </div>
+ -->
 </div>
-
-<div class="row">
-  <div class="column">
-    
-                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      
-                      <option value="">-None-</option>
-                      <option value="">Mumbai</option>
-                      <option value="">Bangalore</option>
-                      <option value="">Delhi</option>
-                      <option value="">Sikkim</option>
-                      <option value="">Srinagar</option>
-                      <option value="">Goa</option>
-                      <option value="">Amritsar</option>
-                      <option value="">Kolkata</option>
-                      <option value="">Chennai</option>
-                    </select>
-                  
-                
-
-  </div>
-  <div class="column">
-    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      <option value="">-None-</option>
-                      <option value="">Cost Effective Option</option>
-                      <option value="">Luxurious Option</option>
-                      </select>
-  </div>
-  <div class="column">
-    <input type="number" class="form-control" name="price" placeholder="insert price">
-  </div>
-</div>
-
-<div class="row">
-  <div class="column">
-    
-                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      
-                      <option value="">-None-</option>
-                      <option value="">Mumbai</option>
-                      <option value="">Bangalore</option>
-                      <option value="">Delhi</option>
-                      <option value="">Sikkim</option>
-                      <option value="">Srinagar</option>
-                      <option value="">Goa</option>
-                      <option value="">Amritsar</option>
-                      <option value="">Kolkata</option>
-                      <option value="">Chennai</option>
-                    </select>
-                  
-                
-
-  </div>
-  <div class="column">
-    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      <option value="">-None-</option>
-                      <option value="">Cost Effective Option</option>
-                      <option value="">Luxurious Option</option>
-                      </select>
-  </div>
-  <div class="column">
-    <input type="number" class="form-control" name="price" placeholder="insert price">
-  </div>
-</div>
-
-<div class="row">
-  <div class="column">
-    
-                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      
-                      <option value="">-None-</option>
-                      <option value="">Mumbai</option>
-                      <option value="">Bangalore</option>
-                      <option value="">Delhi</option>
-                      <option value="">Sikkim</option>
-                      <option value="">Srinagar</option>
-                      <option value="">Goa</option>
-                      <option value="">Amritsar</option>
-                      <option value="">Kolkata</option>
-                      <option value="">Chennai</option>
-                    </select>
-                  
-                
-
-  </div>
-  <div class="column">
-    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      <option value="">-None-</option>
-                      <option value="">Cost Effective Option</option>
-                      <option value="">Luxurious Option</option>
-                      </select>
-  </div>
-  <div class="column">
-    <input type="number" class="form-control" name="price" placeholder="insert price">
-  </div>
-</div>
-
-<div class="row">
-  <div class="column">
-    
-                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      
-                      <option value="">-None-</option>
-                      <option value="">Mumbai</option>
-                      <option value="">Bangalore</option>
-                      <option value="">Delhi</option>
-                      <option value="">Sikkim</option>
-                      <option value="">Srinagar</option>
-                      <option value="">Goa</option>
-                      <option value="">Amritsar</option>
-                      <option value="">Kolkata</option>
-                      <option value="">Chennai</option>
-                    </select>
-                  
-                
-
-  </div>
-  <div class="column">
-    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      <option value="">-None-</option>
-                      <option value="">Cost Effective Option</option>
-                      <option value="">Luxurious Option</option>
-                      </select>
-  </div>
-  <div class="column">
-    <input type="number" class="form-control" name="price" placeholder="insert price">
-  </div>
-</div>
-
-<div class="row">
-  <div class="column">
-    
-                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      
-                      <option value="">-None-</option>
-                      <option value="">Mumbai</option>
-                      <option value="">Bangalore</option>
-                      <option value="">Delhi</option>
-                      <option value="">Sikkim</option>
-                      <option value="">Srinagar</option>
-                      <option value="">Goa</option>
-                      <option value="">Amritsar</option>
-                      <option value="">Kolkata</option>
-                      <option value="">Chennai</option>
-                    </select>
-                  
-                
-
-  </div>
-  <div class="column">
-    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      <option value="">-None-</option>
-                      <option value="">Cost Effective Option</option>
-                      <option value="">Luxurious Option</option>
-                      </select>
-  </div>
-  <div class="column">
-    <input type="number" class="form-control" name="price" placeholder="insert price">
-  </div>
-</div>
-
-<div class="row">
-  <div class="column">
-    
-                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      
-                      <option value="">-None-</option>
-                      <option value="">Mumbai</option>
-                      <option value="">Bangalore</option>
-                      <option value="">Delhi</option>
-                      <option value="">Sikkim</option>
-                      <option value="">Srinagar</option>
-                      <option value="">Goa</option>
-                      <option value="">Amritsar</option>
-                      <option value="">Kolkata</option>
-                      <option value="">Chennai</option>
-                    </select>
-                  
-                
-
-  </div>
-  <div class="column">
-    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      <option value="">-None-</option>
-                      <option value="">Cost Effective Option</option>
-                      <option value="">Luxurious Option</option>
-                      </select>
-  </div>
-  <div class="column">
-    <input type="number" class="form-control" name="price" placeholder="insert price">
-  </div>
-</div>
-
-<div class="row">
-  <div class="column">
-                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      
-                      <option value="">-None-</option>
-                      <option value="">Mumbai</option>
-                      <option value="">Bangalore</option>
-                      <option value="">Delhi</option>
-                      <option value="">Sikkim</option>
-                      <option value="">Srinagar</option>
-                      <option value="">Goa</option>
-                      <option value="">Amritsar</option>
-                      <option value="">Kolkata</option>
-                      <option value="">Chennai</option>
-                    </select>
-                  
-                
-
-  </div>
-  <div class="column">
-    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      
-                      <option value="">-None-</option>
-                      <option value="">Cost Effective Option</option>
-                      <option value="">Luxurious Option</option>
-                      </select>
-  </div>
-  <div class="column">
-    <input type="number" class="form-control" name="price" placeholder="insert price">
-  </div>
 </div>
 
 </div>
-	<footer class="footer ftco-bg-dark ftco-section">
-    
-<section class=" ftco-section bg-dark ftco-light "> 
-        
-    <div class="footer-copyright text-center text_color-light py-4">
-      <p class="text-light bg-dark">© 2016 Copyright:
-      <a href="index.php"> DDVVToursAndTravels.com</a></p>
-    </div>
-    
-
-</section>
-    
-</footer>
-<!-- Footer -->
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>

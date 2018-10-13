@@ -110,10 +110,10 @@ $cust_id=$_SESSION['c_id'];
       <!-- <img src="images/sample.jpg" class="img-circle" style="border-radius: 50%" width="150px"><br><br> -->
      <form action="edit.php" method="POST">
        <div class="form-group">
-          <input type="text" class="form-control" name="name_edit" placeholder="Edit name">
+          <input type="text" class="form-control" name="name_edit" placeholder="Edit name" value="<?php echo $name; ?>">
        </div>
        <div class="form-group">
-          <input type="text" class="form-control" name="email_edit" placeholder="Edit email address">
+          <input type="text" class="form-control" name="email_edit" placeholder="Edit email address" value="<?php echo $email; ?>">
        </div>
        <div class="form-group">
           <input type="submit" value="Save changes" class="btn btn-primary py-2 px-4">
@@ -136,7 +136,7 @@ $cust_id=$_SESSION['c_id'];
                 <a class="nav-link" name="signout_account" href="logout.php">Sign Out</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" name="follow_account" href="https://www.facebook.com/DDVV-Travels-1911381365838357/">Follow us on Facebook!</a>
+                <a class="nav-link" name="follow_account" href="https://www.facebook.com/DDVV-Travels-1911381365838357/" target="_blank">Follow us on Facebook!</a>
             </li>
         </ul>
     </div>

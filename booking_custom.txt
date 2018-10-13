@@ -1,0 +1,10 @@
+booking_custom.php - front end of page 1
+booking_custom_php.php - back end of page 1
+booking_custom_new.php - front end of page 2
+booking_custom_new_php.php - back end of page 2
+
+
+
+booking_custom_og.php - front end of original layout
+
+booking_custom.txt - this file
