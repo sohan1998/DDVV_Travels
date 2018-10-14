@@ -79,8 +79,7 @@
 <div class="container">
 <div class="row">
   <div class>
-    <pre style="font-size: 50px"><b>Where do you want
-to travel?</b></pre>
+    <pre style="font-size: 50px"><b>Where do you want to travel?</b></pre>
     <!-- <br><br><br> -->
     <form action="booking_custom_new.php" method="POST">
           <div class="icon"><span class="ion-ios-arrow-down"></span></div>
