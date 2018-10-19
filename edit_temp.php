@@ -26,7 +26,7 @@ $name=$_SESSION['name'];
 $cust_id=$_SESSION['c_id'];
 
 if (!$name) {
-	header("Location: login.html");
+	header("Location: login.html?login_error");
 }
 
 //$message = "Username and/or Password incorrect.\\nTry again.";
