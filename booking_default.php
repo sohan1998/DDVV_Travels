@@ -6,13 +6,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Required meta tags -->
+  <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="styles.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<title>Book the DDVV Special Tour</title>
+  <title>Book the DDVV Special Tour</title>
 </head>
 <body>
   <div class="fixed-top">
@@ -49,7 +49,7 @@
           }
       ?>
 </li>
-        <li class="nav-item dropdown active">
+        <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
             Book Tours
         </a>
@@ -66,133 +66,71 @@
   </nav>
 </div>
   
-  	<div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid">
       <div class="container">
     <h1 class="display-3">DDVV Special Tour!</h1>
+</div>    
 </div>
-    
-</div>
+
+
 <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <!--<pre style="font-size: 50px"><b>Cities</b></pre>-->
+      <?php
+          echo "<table class='table table-hover' style='font-size: 20px; margin:auto;'><thead class='bg-secondary text-white'><tr><th>City</th><th>Luxury</th><th>Budget</th></tr></thead><tbody>";
+
+          $cl=array("Mumbai","Delhi","Chennai","Kolkata","Bangalore");
 
 
-<div class="row">
-  <div class="column">
-    <h2>Cities</h2>
-    
-      <p>City 1: Mumbai</p>
-                
+          // Loop to store and display values of individual checked checkbox.
+            foreach($cl as $place_name){
+              // $psw = mysqli_real_escape_string($conn,md5($_POST["psw_login"]));
 
-  </div>
-  <div class="column">
-    <h2>Hotels</h2>
-    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      
-                      <option value="" name="cost_eff">Cost Effective Option</option>
-                      <option value="" name="lux_opt">Luxurious Option</option>
-                      </select>
-  </div>
-  <div class="column">
-    <h2>Price</h2>
-    <!-- <input type="text" class="form-control" name="price" placeholder="insert price"> -->
-  </div>
-</div>
+              // $email = $_POST["email_login"];
+              // $psw = md5($_POST["psw_login"]);
 
-<div class="row">
-  <div class="column">
-    <p>City 2: Amritsar</p>
-                
+              $_SESSION[$place_name]=$place_name;
+              
 
-  </div>
-  <div class="column">
-    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      
-                      <option value="">Cost Effective Option</option>
-                      <option value="">Luxurious Option</option>
-                      </select>
-  </div>
-  <div class="column">
-    <input type="number" class="form-control" name="price" placeholder="insert price">
-  </div>
-</div>
+              $query1 = "SELECT Hotel_LUX, Hotel_CFO FROM place WHERE Name = '$place_name'";
 
-<div class="row">
-  <div class="column">
-    <p>City 3: Delhi</p>
-                
+              $result = mysqli_query($conn, $query1);
+              $resultCheck = mysqli_num_rows($result);
+              if ($resultCheck > 0) {
+                $row = mysqli_fetch_assoc($result);
+                echo "<tr>"."<td>".$place_name."</td>"."<td>".$row['Hotel_LUX']."</td>"."<td>".$row['Hotel_CFO']."</td>"."</tr>";
+                //echo $row['Hotel_LUX'] . '&nbsp;&nbsp;&nbsp;&nbsp;' . $row['Hotel_CFO'] . "<hr>";
+              }
 
-  </div>
-  <div class="column">
-    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      
-                      <option value="">Cost Effective Option</option>
-                      <option value="">Luxurious Option</option>
-                      </select>
-  </div>
-  <div class="column">
-    <input type="number" class="form-control" name="price" placeholder="insert price">
-  </div>
-</div>
+            }
+            $query2 = "SELECT SUM(Price) AS Total_LUX FROM hotel WHERE Place IN ('" . implode("', '", $cl) . "') AND Type = 'LUX'";
 
-<div class="row">
-  <div class="column">
-    <p>City 4: Kolkata</p>
-          
+            $result2 = mysqli_query($conn, $query2);
+            $total_lux = mysqli_fetch_assoc($result2)['Total_LUX'];
 
-  </div>
-  <div class="column">
-    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      
-                      <option value="">Cost Effective Option</option>
-                      <option value="">Luxurious Option</option>
-                      </select>
-  </div>
-  <div class="column">
-    <input type="number" class="form-control" name="price" placeholder="insert price">
-  </div>
-</div>
+            $query3 = "SELECT SUM(Price) AS Total_CFO FROM hotel WHERE Place IN ('" . implode("', '", $cl) . "') AND Type = 'CFO'";
 
-<div class="row">
-  <div class="column">
-    <p>City 5: Sikkim</p>
-                    
+            $result3 = mysqli_query($conn, $query3);
+            $total_cfo = mysqli_fetch_assoc($result3)['Total_CFO'];
 
-  </div>
-  <div class="column">
-    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      
-                      <option value="">Cost Effective Option</option>
-                      <option value="">Luxurious Option</option>
-                      </select>
-  </div>
-  <div class="column">
-    <input type="number" class="form-control" name="price" placeholder="insert price">
-  </div>
-</div>
+              echo "<tr class='bg-light'>"."<td>"."TOTAL"."</td>"."<td>".$total_lux."</td>"."<td>".$total_cfo."</td>"."</tr>";
+            echo "</tbody></table>";
 
-</div>
-	<footer class="footer ftco-bg-dark ftco-section">
-    
-<section class=" ftco-section bg-dark ftco-light "> 
-        
-    <div class="footer-copyright text-center text_color-light py-4">
-      <p class="text-light bg-dark">© 2016 Copyright:
-      <a href="index.php"> DDVVToursAndTravels.com</a></p>
-    </div>
-    
+            $_SESSION['total_cfo']=$total_cfo;
+            $_SESSION['total_lux']=$total_lux;
+            $_SESSION['ddvv_disc']=10;
+      ?>
 
-</section>
-    
-</footer>
-<!-- Footer -->
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</body>
-</html>
+      <form action="booking_confirmation.php" class="mt-3" style="max-width: 400px; margin: auto;">
+        <div class="form-group">
+          <label for="package">Select Package:</label>
+          <select class="form-control" id="package" name="package">
+            <option value="LUX">Luxurious</option>
+            <option value="CFO">Budget</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="submit" name="submit" value="Submit" class="btn btn-primary btn-block"/>
+        </div>
+      </form>

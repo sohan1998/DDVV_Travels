@@ -27,6 +27,7 @@ if ($resultCheck>0) {
 	$_SESSION['pwd']=$row['Password'];
 	$_SESSION['dob']=$row['DOB'];
 	$_SESSION['c_id']=$row['Cust_ID'];
+	$_SESSION['prev_tours']=$row['previous_tours'];
 
 	//header("Location: login.html?login=success");
 
