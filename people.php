@@ -72,97 +72,53 @@
 	
 <div class="jumbotron jumbotron-fluid">
 			<div class="container">
-				<h1 class="display-3">Here's your bill:</h1>
+				<h1 class="display-3">Add travel buddies?</h1>
 			</div>
 </div>
 
-
-<?php 
-
-
-echo "<table class='table table-hover' style='font-size: 20px; margin:auto;'><thead class='bg-secondary text-white'><tr><th>Name</th><th>Amount</th></thead><tbody>";
-
-// $solo = mysqli_real_escape_string($conn,$_POST["solo"]);
-// $buddies = mysqli_real_escape_string($conn,$_POST["buddies"]);
-// $no_of_buddies = mysqli_real_escape_string($conn,$_POST["no_of_buddies"]);
-
-
-
-$pkg=$_SESSION['package'];
-
-$total_lux=$_SESSION['total_lux'];
-$total_cfo=$_SESSION['total_cfo'];
-
-if (isset($_POST['submit'])) {
-	if (isset($_POST['radio'])) {
-		$selected=$_POST['radio'];
-		if ($selected=='buddies') {
-			if (isset($_POST['no_of_buddies'])) {
-				$no_of_buddies=$_POST['no_of_buddies'];
-				$total_lux=$total_lux*($no_of_buddies+1);
-				$total_cfo=$total_cfo*($no_of_buddies+1);
-			}
-		}
-	}
-}
-
-$c_id=$_SESSION['c_id'];
-$query1="SELECT * FROM customer_account WHERE Cust_ID='$c_id'";
-
-$result1 = mysqli_query($conn, $query1);
-$resultCheck = mysqli_num_rows($result1);
-if ($resultCheck > 0) {
-	$row = mysqli_fetch_assoc($result1);
-	$prev_tours=$row['previous_tours'];
-}
+	<div class="container">
+		<div class="row block-9">
+		<div class="col-md-7 pr-md-5">
+			<form action="booking_confirmation.php" method="post">
+				<h4>
+			  <div class="form-group">
+				<input type="radio" name="radio" value="solo"> Travelling Solo<br>  
+			  </div>
+			  <div class="form-group" onclick="">
+				<input type="radio" name="radio" value="buddies"> With buddies <br>
+			  </div>
+			 <div class="form-group">
+				<input type="text" class="form-control" name="no_of_buddies" placeholder="No of buddies">
+			  </div>
+		  </h4>
+			  <div class="form-group">
+				<input type="submit" name="submit" value="Next" class="btn btn-primary py-2 px-4">
+			  </div>
+			</form>
+		  </div>
+		  </div>
+ </div>
 
 
-if (isset($_SESSION['ddvv_disc'])) {
-	$ddvv_disc=$_SESSION['ddvv_disc'];
-}
-else{
-	$ddvv_disc=0;
-}
-if($pkg=='LUX')
-{
-	echo "<tr><td>Customized luxury tour</td>";
-	echo "<td>".$total_lux."</td></tr>";
-	echo "<tr><td>DDVV Special Discount</td>";
-	$disc=$ddvv_disc*$total_lux/100;
-	echo "<td>-".$disc."</td></tr>";
-	echo "<tr><td>Loyalty discount</td>";
-	$pt_disc=$prev_tours*$total_lux/100;
-	echo "<td>-".$pt_disc."</td></tr>";
-	$gst=18*$total_lux/100;
-	echo "<tr><td>GST</td><td>+".$gst."</td></tr>";
-	$total=$total_lux-$disc-$pt_disc+$gst;
-	echo "<tr class='bg-light'>"."<td>"."TOTAL"."</td>"."<td>".$total."</td>"."</tr>";
+ <?php 
+
+$pkg=$_GET['package'];
+$_SESSION['package']=$pkg;
 
 
-}
-if($pkg=='CFO')
-{
-	echo "<tr><td>Customized budget tour</td>";
-	echo "<td>".$total_cfo."</td></tr>";
-	echo "<tr><td>DDVV Special Discount</td>";
-	$disc=$ddvv_disc*$total_cfo/100;
-	echo "<td>-".$disc."</td></tr>";
-	echo "<tr><td>Loyalty discount</td>";
-	$pt_disc=$prev_tours*$total_cfo/100;
-	echo "<td>-".$pt_disc."</td></tr>";
-	$gst=18*$total_cfo/100;
-	echo "<tr><td>GST</td><td>+".$gst."</td></tr>";
-	$total=$total_cfo-$disc-$pt_disc+$gst;
-	echo "<tr class='bg-light'>"."<td>"."TOTAL"."</td>"."<td>".$total."</td>"."</tr>";
-}
-echo "</tbody></table>";
+  ?>
 
 
-?>
+<!-- 
 
-<button><a href="my_account.php"> Proceed </a></button>
+<form action="people2.php" method="POST">
+<input type="radio" name="solo" value="male">	Travelling solo<br>
+<input type="radio" name="buddies" value="female" />	With buddies<br>
+<input type="text" name="no_of_buddies" placeholder="Enter no of buddies">
+<input type="submit" name="submit" value="Submit">
+</form>
+ -->
 
-</body>
 
 </body>
 </html>

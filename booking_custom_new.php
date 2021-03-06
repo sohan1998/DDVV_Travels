@@ -96,7 +96,8 @@
 							// $email = $_POST["email_login"];
 							// $psw = md5($_POST["psw_login"]);
 
-							$_SESSION[$place_name] = $place_name;
+							$_SESSION[$place_name]=$place_name;
+							
 
 							$query1 = "SELECT Hotel_LUX, Hotel_CFO FROM place WHERE Name = '$place_name'";
 
@@ -128,7 +129,7 @@
 				}
 			?>
 
-			<form action="booking_confirmation.php" class="mt-3" style="max-width: 400px; margin: auto;">
+			<form action="people.php" class="mt-3" style="max-width: 400px; margin: auto;">
 				<div class="form-group">
 					<label for="package">Select Package:</label>
 					<select class="form-control" id="package" name="package">

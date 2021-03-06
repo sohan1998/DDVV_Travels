@@ -72,9 +72,9 @@
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
     <h1 class="display-2">Wander. Explore. Experience.</h1>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+   <!--  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nav-itemsi ut aliquip ex ea commodo consequat. </p> -->
     <div class="block-17 my-4">
-              <form action="" method="post" class="d-block d-flex">
+    <!--           <form action="" method="post" class="d-block d-flex">
                 <div class="fields d-block d-flex">
                   <div class="textfield-search one-third">
                     <input type="text" class="form-control" placeholder="Ex: Italy,USA,Russia">
@@ -90,7 +90,7 @@
                   </div>
                 </div>
                 <input type="submit" class="search-submit btn btn-primary" value="Search">  
-              </form>
+              </form> -->
             </div>
     </div>
 </div> 
