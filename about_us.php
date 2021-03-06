@@ -84,7 +84,7 @@
 <br><br><br>
 <div class="container">
         <h3>About Us</h3>
-        <p class="lead">A trusted name since 2016</p>
+        <p class="lead">A trusted name since 2021</p>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
@@ -202,7 +202,7 @@
 	<footer class="ftco-footer ftco-bg-dark ftco-section">
     <section class="ftco-section bg-dark ftco-light "> 
     <div class="footer-copyright text-center text_color-light py-4">
-      <p class="text-light bg-dark"><!-- <h5 class="ftco-heading-5 ftco-heading-light"> -->© 2016 Copyright:
+      <p class="text-light bg-dark"><!-- <h5 class="ftco-heading-5 ftco-heading-light"> -->© 2021 Copyright:
       <a href="index.php"> DDVVToursAndTravels.com</a></p>
     </div>
     <!-- Copyright -->

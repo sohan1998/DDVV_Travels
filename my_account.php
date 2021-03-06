@@ -144,7 +144,7 @@ $prev_tours=$_SESSION['prev_tours'];
   <footer class="ftco-footer ftco-bg-dark ftco-section">
 	<section class="ftco-section bg-dark ftco-light "> 
 	<div class="footer-copyright text-center text_color-light py-4">
-	  <p class="text-light bg-dark"><!-- <h5 class="ftco-heading-5 ftco-heading-light"> -->© 2016 Copyright:
+	  <p class="text-light bg-dark"><!-- <h5 class="ftco-heading-5 ftco-heading-light"> -->© 2021 Copyright:
 	  <a href="index.php"> DDVVToursAndTravels.com</a></p>
 	</div>
 	<!-- Copyright -->
