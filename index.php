@@ -109,19 +109,19 @@
                           </map>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block col-4 img-fluid" src="images/bg_1.jpg">
+                    <img class="d-block col-4 img-fluid" src="images/mumbai/mum_4.jpg">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block col-4 img-fluid" src="images/bg_1.jpg">
+                    <img class="d-block col-4 img-fluid" src="images/bangalore/ban_3.jpg">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block col-4 img-fluid" src="images/bg_1.jpg">
+                    <img class="d-block col-4 img-fluid" src="images/chennai/che_3.jpg">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block col-4 img-fluid" src="images/bg_1.jpg">
+                    <img class="d-block col-4 img-fluid" src="images/panaji/pan_2.jpg">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block col-4 img-fluid" src="images/bg_1.jpg">
+                    <img class="d-block col-4 img-fluid" src="images/srinagar/sri_4.jpg">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
@@ -141,10 +141,10 @@
 <div class="row mt-sm-4 mt-md-0">
     <div class="col-sm-12 col-md-8">
         <h3>About Us</h3>
-        <p class="lead">A trusted name since 2016</p>
+        <p class="lead">A trusted name since 2021</p>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p>We here at DDVV Travels welcome you!</p>
+        <p>Booking a travel package when it comes to travelling to new parts of the country is a practice that has slowly gained a lot of popularity. Today, whenever it is about planning a holiday trip, many people have a preferred travel portal in India that is best for their specific needs. Owing to the faith bestowed in our travel services by our patrons, DDVV Travels has established its niche and is counted among the top 10 travel agencies in India.</p>
     </div>
 
     <div class="col-sm-12 col-md-4">
@@ -176,7 +176,7 @@
 <section class=" ftco-section bg-dark ftco-light "> 
         
     <div class="footer-copyright text-center text_color-light py-4">
-      <p class="text-light bg-dark">© 2016 Copyright:
+      <p class="text-light bg-dark">© 2021 Copyright:
       <a href="index.php"> DDVVToursAndTravels.com</a></p>
     </div>
     

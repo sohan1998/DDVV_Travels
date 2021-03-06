@@ -132,7 +132,7 @@
 <div class="row">
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 ">
               <a target="_blank" href="mumbai.php">
-                <img src="images/bg_1.jpg" class="img-responsive" width="95%" height="300">
+                <img src="images/mumbai/mum_2.jpg" class="img-responsive" width="95%" height="300">
                 <div class="desc">
                   <h5 class="text-dark bg-white text-center">Mumbai</h5>
                 </div>
@@ -141,7 +141,7 @@
 
             <div class="image2 col-lg-4 col-md-4 col-sm-4 col-xs-6 ">
               <a target="_blank" href="bangalore.php">
-                <img src="images/bg_2.jpg" class="img-responsive" width="95%" height="300">
+                <img src="images/bangalore/ban_2.jpg" class="img-responsive" width="95%" height="300">
                 <div class="desc">
                   <h5 class="text-dark bg-white text-center">Bangalore</h5>
                 </div>
@@ -150,7 +150,7 @@
 
             <div class="image3 col-lg-4 col-md-4 col-sm-4 col-xs-6 ">
               <a target="_blank" href="delhi.php">
-                <img src="images/bg_3.jpg" class="img-responsive" width="95%" height="300">
+                <img src="images/delhi/del_2.jpg" class="img-responsive" width="95%" height="300">
                 <div class="description">
                   <h5 class="text-dark bg-white text-center">Delhi</h5>
                 </div>
@@ -164,7 +164,7 @@
 <div class="row">
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 ">
               <a target="_blank" href="gangtok.php">
-                <img src="images/bg_1.jpg" class="img-responsive" width="95%" height="300">
+                <img src="images/gangtok/gan_3.jpg" class="img-responsive" width="95%" height="300">
                 <div class="desc">
                   <h5 class="text-dark bg-white text-center">Gangtok</h5>
                 </div>
@@ -173,7 +173,7 @@
 
             <div class="image2 col-lg-4 col-md-4 col-sm-4 col-xs-6 ">
               <a target="_blank" href="srinagar.php">
-                <img src="images/bg_2.jpg" class="img-responsive" width="95%" height="300">
+                <img src="images/srinagar/sri_3.jpg" class="img-responsive" width="95%" height="300">
                 <div class="desc">
                   <h5 class="text-dark bg-white text-center">Srinagar</h5>
                 </div>
@@ -182,7 +182,7 @@
 
             <div class="image3 col-lg-4 col-md-4 col-sm-4 col-xs-6 ">
               <a target="_blank" href="panaji.php">
-                <img src="images/bg_3.jpg" class="img-responsive" width="95%" height="300">
+                <img src="images/panaji/pan_3.jpg" class="img-responsive" width="95%" height="300">
                 <div class="description">
                   <h5 class="text-dark bg-white text-center">Panaji</h5>
                 </div>
@@ -194,7 +194,7 @@
 <div class="row">
             <div class="image4 col-lg-4 col-md-4 col-sm-4 col-xs-6 ">
               <a target="_blank" href="amritsar.php">
-                <img src="images/bg_4.jpg" class="img-responsive" width="95%" height="300">
+                <img src="images/amritsar/amr_3.jpg" class="img-responsive" width="95%" height="300">
                 <div class="description">
                   <h5 class="text-dark bg-white text-center">Amritsar</h5>
                 </div>
@@ -203,7 +203,7 @@
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 ">
               <a target="_blank" href="kolkata.php">
-                <img src="images/bg_5.jpg" class="img-responsive" width="95%" height="300">
+                <img src="images/kolkata/kol_3.jpg" class="img-responsive" width="95%" height="300">
                 <div class="description">
                   <h5 class="text-dark bg-white text-center">Kolkata</h5>
                 </div>
@@ -212,7 +212,7 @@
 
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 ">
               <a target="_blank" href="chennai.php">
-                <img src="images/bg_1.jpg" class="img-responsive" width="95%" height="300">
+                <img src="images/chennai/che_2.jpg" class="img-responsive" width="95%" height="300">
                 <div class="description">
                   <h5 class="text-dark bg-white text-center">Chennai</h5>
                 </div>
@@ -244,7 +244,7 @@
 <section class=" ftco-section bg-dark ftco-light "> 
         
     <div class="footer-copyright text-center text_color-light py-4">
-      <p class="text-light bg-dark">© 2016 Copyright:
+      <p class="text-light bg-dark">© 2021 Copyright:
       <a href="index.php"> DDVVToursAndTravels.com</a></p>
     </div>
     
